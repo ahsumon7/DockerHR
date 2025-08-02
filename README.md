@@ -21,6 +21,6 @@ Make sure you have the following installed on your machine:
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/ahsumon7/HrApplicationDocker.git
-cd HrApplicationDocker
+git clone https://github.com/ahsumon7/DockerHR.git
+cd DockerHR
 docker-compose up --build

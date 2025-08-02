@@ -1,0 +1,195 @@
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.file-import,
+.search-employee,
+.show-all {
+  flex: 1 1 250px;
+  min-width: 250px;
+}
+
+.form-control,
+.form-control-file {
+  width: 100%;
+  padding: 0.4rem 0.7rem;
+  font-size: 1rem;
+}
+
+.form-label {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.btn {
+  min-width: 100px;
+  cursor: pointer;
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table thead th {
+  padding: 12px;
+  text-align: left;
+}
+
+.table tbody td {
+  padding: 10px;
+}
+
+.table-striped tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+.table-bordered,
+.table-bordered th,
+.table-bordered td {
+  border: 1px solid #dee2e6;
+}
+
+.btn-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+}
+
+.me-2 {
+  margin-right: 0.5rem;
+}
+.actions {
+  display: flex;
+  flex-wrap: wrap;          /* allow wrapping on small screens */
+  gap: 20px;                /* spacing between the items */
+  justify-content: space-between; /* distribute space evenly */
+  align-items: flex-end;    /* align inputs and buttons nicely at bottom */
+  margin-bottom: 30px;
+}
+
+.file-import,
+.search-employee,
+.show-all {
+  flex: 1 1 250px;          /* grow & shrink with a min width of 250px */
+  display: flex;
+  flex-direction: column;
+}
+
+.file-import input[type="file"] {
+  cursor: pointer;
+}
+
+.file-import button,
+.search-employee button,
+.show-all button {
+  width: fit-content;
+  align-self: flex-start;  /* keep buttons aligned left */
+  margin-top: 8px;
+}
+
+/* Inputs styling for consistency */
+.file-import input[type="file"],
+.search-employee input {
+  padding: 8px 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Responsive tweak: stack vertically on narrow screens */
+@media (max-width: 700px) {
+  .actions {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .file-import,
+  .search-employee,
+  .show-all {
+    flex: unset;
+    width: 100%;
+  }
+
+  .file-import button,
+  .search-employee button,
+  .show-all button {
+    width: 100%;
+  }
+}
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+
+/* Top row: Import and Search side by side */
+.file-import,
+.search-employee {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.file-import input[type="file"],
+.search-employee input {
+  padding: 8px 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.file-import button,
+.search-employee button {
+  width: fit-content;
+  align-self: flex-start;
+  margin-top: 8px;
+}
+
+/* Bottom row: Show All centered */
+.show-all {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.show-all button {
+  width: 150px;
+}
+
+/* Responsive: stack everything vertically */
+@media (max-width: 700px) {
+  .actions {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .file-import,
+  .search-employee {
+    width: 100%;
+  }
+
+  .file-import button,
+  .search-employee button,
+  .show-all button {
+    width: 100%;
+  }
+}

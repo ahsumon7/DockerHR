@@ -1,0 +1,66 @@
+<div class="container">
+
+  <h1 class="mb-4">Employee Management</h1>
+
+  <div class="actions mb-4">
+
+    <!-- File input and import button -->
+    <div class="file-import">
+      <input type="file" (change)="onFileSelected($event)" accept=".xml" id="fileInput" class="form-control-file" />
+      <button class="btn btn-success mt-2" (click)="importEmployees()" [disabled]="!selectedFile">
+        Import XML
+      </button>
+    </div>
+
+    <!-- Search by Employee ID -->
+    <div class="search-employee mt-4">
+      <label for="searchId" class="form-label">Search by Employee ID:</label>
+      <input
+        id="searchId"
+        [(ngModel)]="searchEmployeeId"
+        placeholder="Enter Employee ID"
+        class="form-control"
+      />
+      <button class="btn btn-primary mt-2" (click)="searchEmployeeById()">
+        Search
+      </button>
+    </div>
+
+    <!-- Show all employees -->
+    <div class="show-all mt-4">
+      <button class="btn btn-secondary" (click)="fetchEmployees()">Show All Employees</button>
+    </div>
+
+  </div>
+
+  <h2 class="mt-5 mb-3">Employee List</h2>
+
+  <table class="table table-striped table-bordered">
+    <thead class="table-dark">
+      <tr>
+        <th>Employee ID</th>
+        <th>Name</th>
+        <th>Division</th>
+        <th>Building</th>
+        <th>Title</th>
+        <th>Room</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emp of employees">
+        <td>{{ emp.employeeId }}</td>
+        <td>{{ emp.firstName }} {{ emp.lastName }}</td>
+        <td>{{ emp.division }}</td>
+        <td>{{ emp.building }}</td>
+        <td>{{ emp.title }}</td>
+        <td>{{ emp.room }}</td>
+        <td>
+          <button class="btn btn-warning btn-sm me-2" (click)="updateEmployee(emp.employeeId)">Update</button>
+          <button class="btn btn-danger btn-sm" (click)="deleteEmployee(emp.employeeId)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

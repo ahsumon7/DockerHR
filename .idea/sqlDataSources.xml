@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DdlMappings">
+    <mapping uuid="2761c811-6e91-4dd2-8f82-0f69f25af523" name="Oracle 19c CDB Mapping">
+      <data-sources db="91185dce-eaaf-4fee-86e3-a59b7e0c4243" ddl="23b27cac-ca55-461b-82d1-62030d8c715a" />
+    </mapping>
+  </component>
+</project>

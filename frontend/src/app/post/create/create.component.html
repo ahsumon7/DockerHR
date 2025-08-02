@@ -1,0 +1,40 @@
+<h2>Create Employee</h2>
+<form [formGroup]="form" (ngSubmit)="submit()" class="employee-form">
+
+  <div class="form-group">
+    <label for="employeeId">Employee ID:</label>
+    <input id="employeeId" formControlName="employeeId" />
+  </div>
+
+  <div class="form-group">
+    <label for="firstName">First Name:</label>
+    <input id="firstName" formControlName="firstName" />
+  </div>
+
+  <div class="form-group">
+    <label for="lastName">Last Name:</label>
+    <input id="lastName" formControlName="lastName" />
+  </div>
+
+  <div class="form-group">
+    <label for="division">Division:</label>
+    <input id="division" formControlName="division" />
+  </div>
+
+  <div class="form-group">
+    <label for="building">Building:</label>
+    <input id="building" formControlName="building" />
+  </div>
+
+  <div class="form-group">
+    <label for="title">Title:</label>
+    <input id="title" formControlName="title" />
+  </div>
+
+  <div class="form-group">
+    <label for="room">Room:</label>
+    <input id="room" formControlName="room" />
+  </div>
+
+  <button type="submit" [disabled]="form.invalid">Submit</button>
+</form>

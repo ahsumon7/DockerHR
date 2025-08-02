@@ -1,0 +1,35 @@
+<h2 class="mb-4">Employee Details</h2>
+
+<div *ngIf="employee; else loading" class="card p-4 shadow-sm">
+  <div class="row mb-2">
+    <div class="col-4 fw-semibold">Employee ID:</div>
+    <div class="col-8">{{ employee.employeeId }}</div>
+  </div>
+  <div class="row mb-2">
+    <div class="col-4 fw-semibold">First Name:</div>
+    <div class="col-8">{{ employee.firstName }}</div>
+  </div>
+  <div class="row mb-2">
+    <div class="col-4 fw-semibold">Last Name:</div>
+    <div class="col-8">{{ employee.lastName }}</div>
+  </div>
+  <div class="row mb-2">
+    <div class="col-4 fw-semibold">Division:</div>
+    <div class="col-8">{{ employee.division }}</div>
+  </div>
+  <div class="row mb-2">
+    <div class="col-4 fw-semibold">Building:</div>
+    <div class="col-8">{{ employee.building }}</div>
+  </div>
+  <div class="row mb-2">
+    <div class="col-4 fw-semibold">Title:</div>
+    <div class="col-8">{{ employee.title }}</div>
+  </div>
+  <div class="row">
+    <div class="col-4 fw-semibold">Room:</div>
+    <div class="col-8">{{ employee.room }}</div>
+  </div>
+</div>
+
+<ng-template #loading>
+  <div class="alert alert-info" role="alert">

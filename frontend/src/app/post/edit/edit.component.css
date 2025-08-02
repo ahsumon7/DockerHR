@@ -1,0 +1,72 @@
+.update-form {
+  max-width: 400px;          /* reduced from 480px */
+  margin: 15px auto;         /* reduced margin */
+  padding: 20px 16px;        /* slightly less padding */
+  background: #fefefe;
+  border-radius: 8px;        /* a bit smaller radius */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08); /* lighter shadow */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.9rem;         /* slightly smaller font size */
+}
+
+.form-group {
+  margin-bottom: 12px;       /* reduced spacing */
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 4px;        /* less margin */
+  font-size: 0.9rem;
+}
+
+.required {
+  color: #d9534f;
+  margin-left: 3px;
+  font-size: 0.9rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 7px 10px;        /* smaller padding */
+  font-size: 0.9rem;         /* smaller font */
+  border: 1.5px solid #ccc;  /* thinner border */
+  border-radius: 5px;        /* smaller radius */
+  transition: border-color 0.25s ease;
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px #007bffaa; /* smaller shadow */
+}
+
+.is-invalid {
+  border-color: #dc3545;
+  background-color: #f8d7da;
+}
+
+.invalid-feedback {
+  color: #dc3545;
+  font-size: 0.8rem;         /* smaller font */
+  margin-top: 3px;           /* less margin */
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 10px 0;           /* less padding */
+  font-size: 1rem;           /* smaller font */
+  border-radius: 6px;        /* smaller radius */
+  cursor: pointer;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:disabled,
+.btn-primary[aria-disabled='true'] {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
